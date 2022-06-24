@@ -1,0 +1,578 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+h1 {
+    text-align: center;
+    font-size: 2.7em;
+}
+#titleHome {
+    font-size: 6em;
+}
+/*home*/
+.favourite {
+    text-align: center;
+    font-size: 200%;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin-top: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+.homeRow {
+    justify-content: center;
+    display: flex;
+}
+.homeColumn {
+    position: relative;
+    width: 33.33%;
+    margin: 3%;
+}
+.homeColumn img {
+    height: 200%;
+    width: 100%;
+    object-fit: cover;
+    border: 2px solid black;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+.homeColumn:hover {
+    width: 40%;
+    transition: 1s;
+}
+.homeColumn:not(:hover) {
+    transition: 1s;
+}
+.overlayHome {
+    font-size: 1em;
+    padding-bottom: 5%;
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.homeColumn:hover .overlayHome{
+    opacity: 0.8;
+}
+.hoverNameHome {
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+    width: fit-content;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    border-radius: 4px;
+    font-size: 2em;
+}
+a {
+    text-decoration: none;
+}
+.welcome {
+    height: 30%;
+    width: 30%;
+    margin-left: 34%;
+    margin-top: 25VH;
+    margin-bottom: 40vh;
+
+}
+#end {
+    width: 100%;
+    height: 4em;
+    border-bottom: 3px solid;
+    line-height: 4em;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    background-color: black;
+}
+#forFooter {
+    position: relative;
+    min-height: 100vh;
+}
+#content{
+    padding-bottom: 30%;
+}
+#end a {
+    color: white;
+    font-size: 1.6em;
+    border: 2px solid white;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-bottom: 0.2%;
+    border-radius: 4px;
+}
+@media screen and (max-width:1000px) {
+    .welcome {
+        width: 60%;
+        height: 60%;
+        margin-left: 17%;
+        margin-bottom: 45%;
+    }
+}
+@media screen and (max-width:768px) {
+    .homeColumn .overlayHome {
+        opacity: 1;
+    }
+    .welcome {
+    margin-top: 35VH;
+    margin-bottom: 50vh;
+    }
+
+}
+@media screen and (max-width:600px) {
+    .hoverNameHome {
+        font-size: 1em;
+    }
+    .favourite{
+        font-size: 1em;
+    }
+    #titleHome {
+        font-size: 3.5em;
+    }
+    #end a{
+        font-size: 1em;
+    }
+    #end {
+        height: 2em;
+        line-height: 2em;
+    }
+    
+}
+/*navigation*/
+header button img{
+    width: 26px;
+    height: 26px;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.side {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    overflow: hidden;
+    padding-top: 20px;
+    transition: 0.5s;
+    box-shadow: 0px 0px 5px;
+    white-space: nowrap;
+    background-color: whitesmoke;
+    z-index: 1;
+}
+.side a {
+    padding: 20px 8px 8px 30px;
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    font-style: italic;
+}
+.side a:hover {
+    color: grey;
+}
+#category {
+    padding-left: 10px;
+    padding-top: 5px;
+    font-size: 25px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+#main {
+    transition: margin-left .5s; 
+    padding: 20px;
+}
+#close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+#close-btn:hover {
+    color: grey;
+}
+.openbtn:hover {
+    color: grey;
+}
+.openbtn {
+    height: 26px;
+    width: 26px;
+    font-size: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.homeButton {
+    position: absolute;
+    height: 1.6em;
+    width: 1.6em;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+.homeButton:hover {
+    opacity: 0.6;
+}
+/*navigation of recepies*/
+.row {
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+}
+.column {
+    padding: 5px;
+    padding-left: 2px;
+    position: relative;
+    width: 33%;
+}
+.column img {
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 4px;
+    object-fit: cover;
+    height: 18em;
+}
+.column:hover img{
+    opacity: 0.4;
+    transition: 0.5s;
+}
+.column:not(:hover) img{
+    transition: 0.5s;
+}
+.overlay {
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.column:hover .overlay{
+    opacity: 1;
+}
+@media screen and (max-width:768px) {
+    .column .overlay{
+        opacity: 1;
+    }
+}
+
+
+.hoverName {
+    background-color: white;
+    border: 2px solid black;
+    width: fit-content;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    border-radius: 4px;
+    font-size: 2em;
+}
+@media screen and (max-width: 600px){
+    .row {
+        flex-direction: column;
+        margin-right: 6%;
+        margin-left: 3%;
+    }
+    .column {
+        width: 100%;
+    }
+}
+/*Lemon cake*/
+#imageOfLemonCake {
+    object-position: 0;
+}
+/*chocolate muffin*/
+#imageOfChocolateMuffin {
+    object-position: 0;
+}
+/*peach pie*/
+#imageOfPeachPie {
+    object-position: 0;
+}
+/*recepies*/
+.titleIngredients {
+    margin-bottom: 3%;
+}
+.imageOfRecepy {
+    width: 100%;
+    height: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: 0 40%;
+    margin-bottom: 20px;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+.containerRecepy {
+    position: relative;
+    text-align: center;
+}
+.recepyTitle {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 4px solid black;
+    border-radius: 5px;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+.nextToEachOther {
+    position: absolute;
+    font-size: 1.3em;
+}
+#instructions {
+    margin-left: 50%;
+    padding-bottom: 5%;
+    padding-right: 5%;
+    border-left: 3px solid black;
+    padding-left: 10%;
+}
+#ingredients {
+    margin-left: 15%;
+    width: 30%;
+}
+.lastStep {
+    padding-bottom: 5%;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border: 2px solid black;
+    border-radius: 1px;
+    background-color: whitesmoke;
+}
+.footer a {
+   text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.steps {
+    list-style-type: none;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+.step {
+    font-size: 1.2em;
+    font-weight: 500;
+    list-style-type: none;
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 4%;
+    margin-bottom: 2%;
+}
+#ingredients ul li {
+    list-style-type: none;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: -5%;
+}
+@media screen and (max-width: 800px) {
+    .recepyTitle {
+        font-size: 25px;
+    }
+    #instructions {
+        margin: 0;
+        padding: 0;
+        position: static;
+        border: 0;
+        border-top: 2px solid black;
+        margin-top: 3%;
+        padding-top: 2%;
+        margin-left: 4%;
+        margin-right: 5%;
+    }
+    #ingredients {
+        margin: 0;
+        padding: 0;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .nextToEachOther {
+        position: static;
+    }
+}
+@media screen and (max-width: 370px) {
+    .recepyTitle {
+        font-size: 15px;
+    }
+    #ingredients {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+}
+/*small cakes navigation*/
+#twoImages1 {
+    width: 50%;
+    height: 50%;
+
+}
+#twoImages2 {
+    width: 50%;
+    height: 50%;
+}
+.twoImagesBaby {
+    height: 20em;
+}
+.cake {
+    font-size: 20px;
+    font-style: italic;
+}
+@media screen and (max-width: 600px) {
+    #twoImages1 {
+        width: 100%;
+        height: 100%;
+    }
+    #twoImages2 {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/*About me*/
+.figureAboutMe {
+    float: right;
+    border: 5px solid black;
+    background-color: silver;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top: 5%;
+}
+figure figcaption {
+    font-size: 10px;
+    text-align: center;
+    text-shadow: 0.5px 0.5px goldenrod;
+    line-height: 10px;
+}
+.photoOfMe {
+    height: 300px;
+    width: 250px;
+    float: right;
+}
+.articleAboutMe {
+    font-size: 1.3em;
+    line-height: 1.3em;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+#introAboutMe {
+    font-size: 1.6em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: gray;
+    border: 2px solid gray;
+}
+#pAboutMe {
+    margin-top: 5%;
+}
+hr {
+    height: 2px;
+    background-color: black;
+    text-align: center;
+}
+/*general*/
+@media screen and (max-width: 500px) {
+    .column {
+      width: 100%;
+    }
+    
+/*aboutme*/
+.photoOfMe {
+    width: 175px;
+    height: 210px;
+    }
+}
+/*complaints*/
+.h3Complaints {
+    font-size: 1em;
+    color: black;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 24.3%;
+    margin-right: 60%;
+    border: 2px solid black;
+    border-radius: 4px;
+    align-items: center;
+}
+.names {
+    text-align: center;
+}
+.inputComplaints {
+    border: 2px solid grey;
+    border-radius: 4px;
+    width: 50%;
+    font-size: 1rem;
+    padding: 0.5%;
+}
+textarea {
+    height: 4em;
+    resize: none;
+}
+.buttonComplaints {
+    background-color: white;
+    font-size: 1em;
+    font-weight: bold;
+    border: 2px black solid;
+    padding: 0.5%;
+    border-radius: 4px;
+    margin-left: 47%;
+    margin-top: 1%;
+}
+.buttonComplaints:hover {
+    cursor: pointer;
+    opacity: 0.6;
+    background-color: grey;
+    color: white;
+}
+@media screen and (max-width:1000px) {
+    .h3Complaints {
+        font-size: 0.7em;
+    }
+}
+@media screen and (max-width: 350px) {
+    .h3Complaints {
+        font-size: 0.4em;
+    }
+    .buttonComplaints {
+        font-size: 0.5em;
+    }
+}
+/*dontCare*/
+.imgSike {
+    border: 2px solid black;
+    border-radius: 4px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+
+}
+.homeDontCare {
+    width: 5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.homeDontCare:hover {
+    opacity: 0.6;
+}
+.GBH {
+    margin: 1%;
+}
+@media screen and (max-width:700px) {
+    .homeDontCare {
+        width: 10%;
+    }
+}
+/*preventing overscrolling*/
+body {
+    overscroll-behavior-y: none;
+  }
+/*---------------------*/
